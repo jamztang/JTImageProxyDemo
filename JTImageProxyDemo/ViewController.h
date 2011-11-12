@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JTImageProxy;
+
 @interface ViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UIProgressView *progressView;
+@property (nonatomic, strong) UIImage <JTImageProxy> *image;
+
+- (IBAction)redownloadDidPress:(id)sender;
 
 @end

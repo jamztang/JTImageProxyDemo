@@ -21,6 +21,8 @@
 		2142523E146DA7E200151D0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2142521C146DA7E200151D0B /* Foundation.framework */; };
 		21425246146DA7E200151D0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21425244146DA7E200151D0B /* InfoPlist.strings */; };
 		21425249146DA7E200151D0B /* JTImageProxyDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21425248146DA7E200151D0B /* JTImageProxyDemoTests.m */; };
+		21425255146DA82600151D0B /* JTImageProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21425254146DA82600151D0B /* JTImageProxy.m */; };
+		21425258146DA87300151D0B /* UIImage+JTImageProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21425257146DA87300151D0B /* UIImage+JTImageProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +40,26 @@
 		2142521A146DA7E200151D0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2142521C146DA7E200151D0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2142521E146DA7E200151D0B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		21425222146DA7E200151D0B /* JTImageProxyDemo-Info.plist */ = {isa = PBXFileReference; path = "JTImageProxyDemo-Info.plist"; sourceTree = "<group>"; };
+		21425222146DA7E200151D0B /* JTImageProxyDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JTImageProxyDemo-Info.plist"; sourceTree = "<group>"; };
 		21425224146DA7E200151D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21425226146DA7E200151D0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		21425228146DA7E200151D0B /* JTImageProxyDemo-Prefix.pch */ = {isa = PBXFileReference; path = "JTImageProxyDemo-Prefix.pch"; sourceTree = "<group>"; };
-		21425229146DA7E200151D0B /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		21425228146DA7E200151D0B /* JTImageProxyDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JTImageProxyDemo-Prefix.pch"; sourceTree = "<group>"; };
+		21425229146DA7E200151D0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2142522A146DA7E200151D0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2142522C146DA7E200151D0B /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		2142522C146DA7E200151D0B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2142522D146DA7E200151D0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		21425230146DA7E200151D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		21425233146DA7E200151D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		2142523A146DA7E200151D0B /* JTImageProxyDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JTImageProxyDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2142523B146DA7E200151D0B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		21425243146DA7E200151D0B /* JTImageProxyDemoTests-Info.plist */ = {isa = PBXFileReference; path = "JTImageProxyDemoTests-Info.plist"; sourceTree = "<group>"; };
+		21425243146DA7E200151D0B /* JTImageProxyDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JTImageProxyDemoTests-Info.plist"; sourceTree = "<group>"; };
 		21425245146DA7E200151D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		21425247146DA7E200151D0B /* JTImageProxyDemoTests.h */ = {isa = PBXFileReference; path = JTImageProxyDemoTests.h; sourceTree = "<group>"; };
+		21425247146DA7E200151D0B /* JTImageProxyDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTImageProxyDemoTests.h; sourceTree = "<group>"; };
 		21425248146DA7E200151D0B /* JTImageProxyDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTImageProxyDemoTests.m; sourceTree = "<group>"; };
+		21425253146DA82600151D0B /* JTImageProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTImageProxy.h; sourceTree = "<group>"; };
+		21425254146DA82600151D0B /* JTImageProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTImageProxy.m; sourceTree = "<group>"; };
+		21425256146DA87300151D0B /* UIImage+JTImageProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTImageProxy.h"; sourceTree = "<group>"; };
+		21425257146DA87300151D0B /* UIImage+JTImageProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTImageProxy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		2142520B146DA7E200151D0B = {
 			isa = PBXGroup;
 			children = (
+				21425252146DA7F900151D0B /* JTImageProxy */,
 				21425220146DA7E200151D0B /* JTImageProxyDemo */,
 				21425241146DA7E200151D0B /* JTImageProxyDemoTests */,
 				21425219146DA7E200151D0B /* Frameworks */,
@@ -152,6 +159,17 @@
 				21425244146DA7E200151D0B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21425252146DA7F900151D0B /* JTImageProxy */ = {
+			isa = PBXGroup;
+			children = (
+				21425253146DA82600151D0B /* JTImageProxy.h */,
+				21425254146DA82600151D0B /* JTImageProxy.m */,
+				21425256146DA87300151D0B /* UIImage+JTImageProxy.h */,
+				21425257146DA87300151D0B /* UIImage+JTImageProxy.m */,
+			);
+			path = JTImageProxy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +282,8 @@
 				21425227146DA7E200151D0B /* main.m in Sources */,
 				2142522B146DA7E200151D0B /* AppDelegate.m in Sources */,
 				2142522E146DA7E200151D0B /* ViewController.m in Sources */,
+				21425255146DA82600151D0B /* JTImageProxy.m in Sources */,
+				21425258146DA87300151D0B /* UIImage+JTImageProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +361,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -360,7 +380,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
