@@ -22,7 +22,8 @@
 - (void)setupImage {
 //    NSURL *imageURL = [NSURL URLWithString:@"http://reserve.apple.com/rprcustomer/8227/images/reserve_pu_store_landing_feature_default.jpg"];
     
-    NSURL *imageURL = [NSURL URLWithString:@"http://www.fas.org/irp/imint/DC_1M_LARGE300_2.jpg"];
+    NSURL *imageURL = [NSURL URLWithString:@"http://upload.wikimedia.org/wikipedia/commons/e/e5/Very_large_array_clouds.jpg"];
+//    NSURL *imageURL = [NSURL URLWithString:@"http://www.fas.org/irp/imint/DC_1M_LARGE300_2.jpg"];
     self.image = [UIImage imageWithURL:imageURL];
 }
 
@@ -34,25 +35,59 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self setupImage];
     
-    [[NSNotificationCenter defaultCenter] addObserverForName:JTImageProxyProgressDidUpdateNotification
-                                                      object:nil
-                                                       queue:nil
-                                                  usingBlock:^(NSNotification *note) {
+//    [[NSNotificationCenter defaultCenter] addObserverForName:JTImageProxyProgressDidUpdateNotification
+//                                                      object:nil
+//                                                       queue:nil
+//                                                  usingBlock:^(NSNotification *note) {
+//
+//                                                      if (image.error) {
+//                                                          self.imageView.backgroundColor = [UIColor redColor];
+//                                                          
+//                                                      } else if (image.progress == 0) {
+//                                                          self.progressView.progress = 0;
+//                                                          self.imageView.backgroundColor = [UIColor whiteColor];
+//                                                      } else if (image.progress < 1) {
+//                                                          self.progressView.progress = image.progress;
+//                                                          self.imageView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:image.progress];
+//                                                      } else if (image.progress == 1) {                                                          NSLog(@"setting image %@", image);
+//                                                          self.imageView.image = image;
+////                                                          self.imageView.image = [UIImage imageWithCGImage:image.CGImage];
+//                                                      }
+//                                                      
+//                                                      NSLog(@"image.progress %f", image.progress);
+//                                                  }];
+//    
+    [self.image addObserver:self
+                 forKeyPath:@"progress"
+                    options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew
+                    context:nil];
+}
 
-                                                      if (image.error) {
-                                                          self.imageView.backgroundColor = [UIColor redColor];
-                                                      } else if (image.progress == 0) {
-                                                          self.progressView.progress = 0;
-                                                          self.imageView.backgroundColor = [UIColor whiteColor];
-                                                      } else if (image.progress < 1) {
-                                                          self.progressView.progress = image.progress;
-                                                          self.imageView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:image.progress];
-                                                      } else if (image.progress == 1) {                                                          NSLog(@"setting image %@", image);
-                                                          self.imageView.image = image.image;
-                                                      }
-                                                      
-                                                      NSLog(@"image.progress %f", image.progress);
-                                                  }];
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if (object == self.image && [keyPath isEqualToString:@"progress"]) {
+        if (image.error) {
+            self.imageView.backgroundColor = [UIColor redColor];
+            
+        } else if (image.progress == 0) {
+            self.progressView.progress = 0;
+            self.imageView.backgroundColor = [UIColor whiteColor];
+        } else if (image.progress < 1) {
+            self.progressView.progress = image.progress;
+            self.imageView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:image.progress];
+        } else if (image.progress == 1) {
+            NSLog(@"setting image %@", image);
+            
+            // This work
+//            self.imageView.image = [UIImage imageWithCGImage:image.CGImage];
+            
+            // This work
+            self.imageView.image = image.image;
+            
+            // This doesn't work
+//            self.imageView.image = image;
+            
+        }
+    }
 }
 
 - (void)viewDidUnload

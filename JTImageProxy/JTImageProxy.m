@@ -54,12 +54,16 @@ NSString *const JTImageProxyProgressDidUpdateNotification = @"JTImageProxyProgre
 #pragma mark NSURLConnectionDataDelegate
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [self willChangeValueForKey:@"progress"];
+
     self.expectedContentLength = [response expectedContentLength];
     NSLog(@"expectedContentLength %f", self.expectedContentLength);
-    [[NSNotificationCenter defaultCenter] postNotificationName:JTImageProxyProgressDidUpdateNotification object:self];
+    
+    [self didChangeValueForKey:@"progress"];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)someData {
+    [self willChangeValueForKey:@"progress"];
     self.totalDownloadedSize += [someData length];
     [self.data appendData:someData];
     
@@ -67,13 +71,16 @@ NSString *const JTImageProxyProgressDidUpdateNotification = @"JTImageProxyProgre
     if (self.totalDownloadedSize == self.expectedContentLength) {
         return; // Wait until connection Did finished loading
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:JTImageProxyProgressDidUpdateNotification object:self];
+    
+    
+    [self didChangeValueForKey:@"progress"];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+
     self.image = [UIImage imageWithData:self.data];
     NSLog(@"finishedImage %@", self.image);
-    [[NSNotificationCenter defaultCenter] postNotificationName:JTImageProxyProgressDidUpdateNotification object:self];
+    [self didChangeValueForKey:@"progress"];
 }
 
 #pragma mark NSProxy

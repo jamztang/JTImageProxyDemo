@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const JTImageProxyProgressDidUpdateNotification;
-
 @protocol JTImageProxy <NSObject>
 
 - (NSURL *)URL;
 - (float)expectedContentLength;
 - (float)totalDownloadedSize;
-- (CGFloat)progress;
+- (CGFloat)progress;            // KVO observable
 - (NSError *)error;
 - (UIImage *)image;
 - (void)restartDownload;
