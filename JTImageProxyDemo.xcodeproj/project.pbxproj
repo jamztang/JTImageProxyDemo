@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AD0BFCB1471891700EDF3F7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0BFCA1471891700EDF3F7 /* LICENSE */; };
 		2142521B146DA7E200151D0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2142521A146DA7E200151D0B /* UIKit.framework */; };
 		2142521D146DA7E200151D0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2142521C146DA7E200151D0B /* Foundation.framework */; };
 		2142521F146DA7E200151D0B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2142521E146DA7E200151D0B /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AD0BFCA1471891700EDF3F7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		21425216146DA7E200151D0B /* JTImageProxyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTImageProxyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2142521A146DA7E200151D0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2142521C146DA7E200151D0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -164,6 +166,7 @@
 		21425252146DA7F900151D0B /* JTImageProxy */ = {
 			isa = PBXGroup;
 			children = (
+				1AD0BFCA1471891700EDF3F7 /* LICENSE */,
 				21425253146DA82600151D0B /* JTImageProxy.h */,
 				21425254146DA82600151D0B /* JTImageProxy.m */,
 				21425256146DA87300151D0B /* UIImage+JTImageProxy.h */,
@@ -245,6 +248,7 @@
 				21425225146DA7E200151D0B /* InfoPlist.strings in Resources */,
 				21425231146DA7E200151D0B /* ViewController_iPhone.xib in Resources */,
 				21425234146DA7E200151D0B /* ViewController_iPad.xib in Resources */,
+				1AD0BFCB1471891700EDF3F7 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +467,7 @@
 				2142524E146DA7E200151D0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2142524F146DA7E200151D0B /* Build configuration list for PBXNativeTarget "JTImageProxyDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +476,7 @@
 				21425251146DA7E200151D0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
